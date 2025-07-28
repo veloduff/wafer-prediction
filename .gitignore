@@ -562,5 +562,9 @@ sync.comm
 # for wm-811k
 LSWMD.pkl.zip
 LSWMD.pkl
+local_data/*
+
+# don't save built models
+models/*
 
 
