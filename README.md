@@ -13,9 +13,7 @@ is a comprehensive collection of semiconductor wafer testing data from real-worl
 - Download the zip file (MIR-WM811K.zip) that has the `LSWMD.pkl` file from http://mirlab.org/dataSet/public/  
 - Place pickle file in `local_data/` directory
 
-**Start by looking at the data**:
-
-**Data analysis notebook**: <a href="https://github.com/veloduff/wafer-prediction/blob/main/wafer_data_analysis.ipynb">wafer_data_analysis.ipynb</a>
+**Start by looking at the data, using the data analysis notebook**: <a href="https://github.com/veloduff/wafer-prediction/blob/main/wafer_data_analysis.ipynb">wafer_data_analysis.ipynb</a>
 
 ### Dataset Overview
 
