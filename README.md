@@ -42,6 +42,15 @@ The notebook provides:
 - Statistical analysis of failure distributions
 
 
+### Potential training process:
+
+For initial batch size your hardware may determine that, but the batch size for this dataset may range
+from 16 to 128.  
+
+1. High LR (0.01-0.1) for 10-15 epochs - rapid initial learning, and pipeline testing
+1. Medium LR (0.001-0.01) for 15-20 epochs - should see high accuracy 
+1. Low LR (0.0001-0.001) for final 10-15 epochs - fine-tuning
+
 ## Installation and setup for classification
 
 1. **Install dependencies**:
@@ -49,11 +58,11 @@ The notebook provides:
    pip install -r requirements.txt
    ```
 
-1. **Train the model** with a smaller number epochs, batch size, and learning rate:
+1. **Train the model** with a smaller number epochs and batch size, and higher learning rate:
    ``` 
    batch_size=16
    epochs=10    
-   lr=0.001
+   lr=0.01
    ```
 
    Run `example_usage.py`:
