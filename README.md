@@ -13,6 +13,10 @@ is a comprehensive collection of semiconductor wafer testing data from real-worl
 - Download the zip file (MIR-WM811K.zip) that has the `LSWMD.pkl` file from http://mirlab.org/dataSet/public/  
 - Place pickle file in `local_data/` directory
 
+**Start by looking at the data**:
+
+**Data analysis notebook**: <a href="https://github.com/veloduff/wafer-prediction/blob/main/wafer_data_analysis.ipynb">wafer_data_analysis.ipynb</a>
+
 ### Dataset Overview
 
 - **Source**: Real fabrication facilities of integrated circuit manufacturers
@@ -32,8 +36,6 @@ is a comprehensive collection of semiconductor wafer testing data from real-worl
 7. **Random** - Randomly distributed failures (866 samples)
 8. **Donut** - Ring-shaped failure pattern (555 samples)
 9. **Near-full** - Almost complete wafer failure (149 samples)
-
-Data analysis notebook: <a href="https://github.com/veloduff/wafer-prediction/blob/main/wafer_data_analysis.ipynb">wafer_data_analysis.ipynb</a>
 
 The notebook provides:
 - Dataset exploration and statistics
