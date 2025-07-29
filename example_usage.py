@@ -49,8 +49,8 @@ def quick_demo():
     history = classifier.train(
         train_dataset, val_dataset,
         batch_size=16,  # Smaller batch for demo
-        epochs=10,      # Reduced epochs for demo
-        lr=0.001
+        epochs=5,      # Reduced epochs for demo
+        lr=0.1
     )
     
     # Evaluate

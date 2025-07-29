@@ -213,6 +213,7 @@ class WaferClassifier:
         
         print(f"Training on {self.device}")
         print(f"Classes: {self.label_encoder.classes_}")
+        print(f"Training Configuration - Batch Size: {batch_size}, Epochs: {epochs}, Learning Rate: {lr}")
         
         for epoch in range(epochs):
             # Training phase
