@@ -139,11 +139,9 @@ class WaferClassifier:
         for i, row in df.iterrows():
             try:
                 # Check if both label and failure type exist and are not empty
-                if (len(row['trainTestLabel']) > 0 and len(row['trainTestLabel'][0]) > 0 and
-                    len(row['failureType']) > 0 and len(row['failureType'][0]) > 0):
-                    
-                    train_label = row['trainTestLabel'][0][0]
-                    failure_type = row['failureType'][0][0]
+                if row['trainTestLabel'] and row['failureType']:
+                    train_label = row['trainTestLabel']
+                    failure_type = row['failureType']
                     
                     if train_label and failure_type:  # Both must be non-empty
                         wafer_map = np.array(row['waferMap'])
@@ -261,12 +259,8 @@ class WaferClassifier:
             # Update learning rate
             scheduler.step()
             
-            # Print progress
-            if (epoch + 1) % 5 == 0:
-                print(f'Epoch [{epoch+1}/{epochs}]')
-                print(f'Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}')
-                print(f'Val Accuracy: {val_accuracy:.2f}%')
-                print('-' * 50)
+            # Print progress for each epoch on one line
+            print(f'Epoch [{epoch+1:3d}/{epochs}] - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Acc: {val_accuracy:.2f}%')
         
         return {
             'train_losses': train_losses,
